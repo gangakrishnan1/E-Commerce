@@ -1,0 +1,148 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Page background */
+body {
+    background-color: #f2f4f8;
+    padding: 20px;
+}
+
+/* Main container */
+#bg {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+/* Product card */
+#bg div {
+    background-color: #ffffff;
+    border-radius: 12px;
+    padding: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover effect */
+#bg div:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.15);
+}
+
+/* Product image */
+#bg img {
+    width: 100%;
+    height: 220px;
+    object-fit: contain;
+    margin-bottom: 10px;
+}
+
+/* Title */
+#bg h1 {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 8px;
+}
+
+/* Description */
+#bg p {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 10px;
+    line-height: 1.4;
+    height: 60px;
+    overflow: hidden;
+}
+
+/* Price */
+#bg h2 {
+    font-size: 18px;
+    color: #0a7cff;
+    margin-bottom: 5px;
+}
+
+/* Rating */
+#bg h3 {
+    font-size: 14px;
+    color: #f39c12;
+}
+
+/* Navbar */
+nav {
+    background-color: #333;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Logo */
+nav h1 {
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+/* Nav list */
+nav ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+/* Nav items */
+nav ul li {
+    margin: 0 10px;
+}
+
+/* Links */
+nav ul li a {
+    display: block;
+    padding: 14px 20px;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-family: Arial, sans-serif;
+}
+
+/* Hover */
+nav ul li a:hover {
+    background-color: #555;
+}
+
+/* Search box */
+nav input[type="search"] {
+    padding: 6px 10px;
+    border-radius: 4px;
+    border: none;
+    outline: none;
+}
+
+/* Remove underline from product links */
+#bg a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Logo image */
+nav .logo {
+    height: 40px;
+    width: auto;
+    cursor: pointer;
+}
+
+
+nav h1 {
+  
+    font-size: 24px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-left: 12px;
+    cursor: pointer;
+    color: #ffffff;
+
+}

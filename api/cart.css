@@ -1,0 +1,124 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* ===== NAVBAR ===== */
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 40px;
+    background-color: #1f2933;
+}
+
+.logo {
+    width: 120px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+nav ul li input[type="search"] {
+    padding: 6px 10px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* ===== CART CONTAINER ===== */
+#cartContainer {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 25px;
+    padding: 40px;
+    background-color: #f4f6f8;
+    min-height: calc(100vh - 80px);
+}
+
+/* ===== CART CARD ===== */
+#cartContainer > div {
+    background-color: white;
+    padding: 15px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease;
+}
+
+#cartContainer > div:hover {
+    transform: scale(1.03);
+}
+
+/* ===== PRODUCT IMAGE ===== */
+#cartContainer img {
+    width: 100%;
+    height: 200px;
+    object-fit: contain;
+    margin-bottom: 10px;
+}
+
+/* ===== TEXT ===== */
+#cartContainer h1 {
+    font-size: 18px;
+    margin-bottom: 8px;
+}
+
+#cartContainer p {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 8px;
+}
+
+#cartContainer h2 {
+    font-size: 16px;
+    color: #111;
+    margin-bottom: 5px;
+}
+
+#cartContainer h3 {
+    font-size: 14px;
+    color: #ff9800;
+    margin-bottom: 12px;
+}
+
+/* ===== DELETE BUTTON ===== */
+#cartContainer button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 6px;
+    background-color: #e63946;
+    color: white;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+#cartContainer button:hover {
+    background-color: #c62828;
+}
+
+nav h1 {
+    font-size: 24px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-left: 12px;
+    cursor: pointer; 
+    color: #ffffff;
+
+}
