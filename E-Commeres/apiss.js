@@ -20,6 +20,8 @@
 //---------------------------
  let bg=document.getElementById("bg");
  let cartlength=document.getElementById("cartlength");
+ let search=document.getElementById("search");
+let allproducts
  function getcartdetails(){
     let data = localStorage.getItem("cart");
     if(data==null){
@@ -80,20 +82,7 @@
     }
 }
 
-// function fetchdata(){
-//     return fetch("https://fakestoreapi.com/products")
-// }
 
-// fetchdata()
-// .then((res)=> {
-//     return res.json();
-// })
-// .then ((data) => {
-//     createproduct(data) 
-// })
-// .catch((err)=>{
-//     console.log(err)
-// })
 
 
  async function getData(){
@@ -101,9 +90,28 @@
         let res=await fetch("https://fakestoreapi.com/products");
         let jsonres= await res.json()
          createproductcard(jsonres);
+         allproducts=jsonres;
     } catch (error) {
         console.log(error);
     }
 }
 
 getData();
+
+
+//searching
+
+search.onkeyup=(event)=>{
+let filterddata=allproducts.filter(product=>{
+    return product.title.includes(event.target.value)
+});
+bg.textContent="";
+if(filterddata.length==0){
+    let h1=document.createElement("h1");
+    h1.textContent="No Product Found";
+    bg.appendChild(h1);
+    
+}else{    
+createproductcard(filterddata);
+}
+}
