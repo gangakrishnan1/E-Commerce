@@ -1,8 +1,6 @@
-//for cart.html div id selecting
+
 let cartContainer = document.getElementById("cartContainer");
 
-//getting the data which is in the form of string -> from local storage
-//let cart= JSON.parse(localStorage.getItem("cart"));
  function getcartdetails(){
 let data=localStorage.getItem("cart");
 if(data==null){

@@ -1,27 +1,9 @@
 
-// let url="https://fakestoreapi.com/products"
-// let options={
-//     method : "GET"
-// }
-// let data=fetch(url,options)
-// //( to fetch ue use fetch(), 2 aru 1st url and 2nd option (2nd get is opyional i.e options) )
-// data.then((msg)=>{
-//     return msg.json()
-//     //(console.log(msg))
-// }).then((data)=>{
-//     console.log(data)
-// })
-// .catch((err)=>{
-//     console.log(err)
-//     //(if there is any error catch will handle this)
-// })
-//(here msg, data are variables)
-
-//---------------------------
  let bg=document.getElementById("bg");
  let cartlength=document.getElementById("cartlength");
  let search=document.getElementById("search");
-let allproducts
+ let logoutBtn=document.getElementById("logoutBtn")
+let allproducts;
  function getcartdetails(){
     let data = localStorage.getItem("cart");
     if(data==null){
@@ -114,4 +96,10 @@ if(filterddata.length==0){
 }else{    
 createproductcard(filterddata);
 }
+}
+//logout
+
+logoutBtn.onclick=function(){
+    localStorage.removeItem("login_user")
+    location.replace("login.html")
 }
