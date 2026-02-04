@@ -134,3 +134,15 @@ nav h1 {
     color: #ffffff;
 
 }
+
+
+button{
+    transition:0.3s ease;
+}
+
+/* click effect */
+button:active{ 
+    transform:scale(1.1);
+}
+
+

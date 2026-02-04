@@ -7,7 +7,9 @@ if(data==null){
     return [];
 }else{
     //data is in the string formate to change it to its original we use parse()
-    return JSON.parse(data);
+   let cartdata= JSON.parse(data);
+       let filtereddata=cartdata.filter(i=>i.userId==localStorage.getItem("login_user"))
+       return filtereddata;
 }
   }
   let cart=getcartdetails();
@@ -50,6 +52,7 @@ button.textContent="Add to Cart";
 div.appendChild(button);
 
 button.onclick = function () {
+    product.userId=localStorage.getItem("login_user");
 cart.push(product);
 localStorage.setItem("cart",JSON.stringify(cart));
 count++
@@ -59,6 +62,9 @@ No_of_carts.textContent="Cart("+count+")";
 
   async function getsingleproduct(){
     try {
+        if(localStorage.getItem("login_user")==null){
+            location.replace("login.html")
+        }
         let id=localStorage.getItem("productId");
         let res = await fetch('https://fakestoreapi.com/products/' + id);
         let jsonres=await res.json();
@@ -68,5 +74,6 @@ No_of_carts.textContent="Cart("+count+")";
     }
 }
 getsingleproduct();
+
 
  

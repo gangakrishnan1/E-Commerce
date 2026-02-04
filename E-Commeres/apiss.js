@@ -9,7 +9,9 @@ let allproducts;
     if(data==null){
         return []
     }else{
-        return JSON.parse(data);
+       let cartdata= JSON.parse(data);
+       let filtereddata=cartdata.filter(i=>i.userId==localStorage.getItem("login_user"))
+       return filtereddata;
     }
  }
  let data=getcartdetails();
@@ -69,6 +71,10 @@ let allproducts;
 
  async function getData(){
     try {
+
+        if(localStorage.getItem("login_user")==null){
+            location.replace("login.html");
+        }
         let res=await fetch("https://fakestoreapi.com/products");
         let jsonres= await res.json()
          createproductcard(jsonres);

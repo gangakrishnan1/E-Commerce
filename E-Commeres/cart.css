@@ -122,3 +122,40 @@ nav h1 {
     color: #ffffff;
 
 }
+
+/* ===== CHECKOUT BAR ===== */
+
+#checkout{
+    position: sticky;
+    bottom: 0;
+    background: white;
+    padding: 15px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 -4px 10px rgba(0,0,0,0.1);
+}
+
+/* total price */
+
+#totalPrice{
+    margin: 0;
+    font-size: 22px;
+    font-weight: 600;
+}
+
+/* buy button */
+
+#buyNow{
+    padding: 12px 40px;
+    background: #0f9d58;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+#buyNow:hover{
+    background:#0b8043;
+}

@@ -3,6 +3,11 @@ let password = document.getElementById("password");
 let btn = document.getElementById("btn");
 let msg = document.getElementById("msg");
 
+    let user=localStorage.getItem("login_user");
+if(user!=null){
+    location.replace("index.html")
+}
+
 async function login() {
     let res = await fetch("http://localhost:4000/users?email=" + email.value);
     let jsonres = await res.json();
@@ -26,6 +31,7 @@ async function login() {
 
 btn.onclick = function (event) {
     event.preventDefault();
+
 
     if (email.value == "" || password.value == "") {
         msg.textContent = "Please fill all fields!";
