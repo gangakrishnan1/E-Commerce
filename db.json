@@ -92,6 +92,13 @@
       "username": "nithya",
       "email": "nithya@gmail.com",
       "password": "1234567"
+    },
+    {
+      "username": "roohi",
+      "email": "roohi@gmail.com",
+      "password": "roohi",
+      "id": "ZYNIGgvHqow"
     }
-  ]
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
 }

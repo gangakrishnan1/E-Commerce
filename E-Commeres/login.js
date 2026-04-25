@@ -9,7 +9,7 @@ if(user!=null){
 }
 
 async function login() {
-    let res = await fetch("http://localhost:4000/users?email=" + email.value);
+    let res = await fetch("http://localhost:3000/users?email=" + email.value);
     let jsonres = await res.json();
 
     if (jsonres.length === 0) {

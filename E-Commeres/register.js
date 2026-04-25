@@ -11,14 +11,14 @@ if(user!=null){
 
 async function register() {
 
-    let data=await fetch("http://localhost:4000/users?email="+email.value)
+    let data=await fetch("http://localhost:3000/users?email="+email.value)
     let jsondata=await data.json()
     if(jsondata.length>0){
 msg.textContent="User already exists"
 msg.style.color="red";
 return
     }
-    let res = await fetch("http://localhost:4000/users", {
+    let res = await fetch("http://localhost:3000/users", {
         method: "POST",
         headers: {
             "Content-Type": "application/json"
